@@ -4,9 +4,7 @@ using MyFirstApi.Communication.Responses;
 
 namespace MyFirstApi.Controllers;
 
-[Route("api/[controller]")]
-[ApiController]
-public class UserController : ControllerBase
+public class UserController : MyFirstApiBaseController
 {
     [HttpGet]
     [Route("{id}")]
@@ -17,8 +15,8 @@ public class UserController : ControllerBase
         var response = new User
         {
             Id = 1,
-            Age = 36,
-            Name = "Allan"
+            Age = 33,
+            Name = "Name 1"
         };
 
         return Ok(response);
@@ -57,8 +55,8 @@ public class UserController : ControllerBase
     {
         var response = new List<User>()
         {
-            new User { Id = 1, Age = 36, Name = "Allan" },
-            new User { Id = 2, Age = 45, Name = "Flávia" }
+            new User { Id = 1, Age = 33, Name = "Name 1" },
+            new User { Id = 2, Age = 44, Name = "Name 2" }
         };
 
         return Ok(response);

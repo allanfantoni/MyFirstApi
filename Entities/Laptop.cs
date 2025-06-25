@@ -1,6 +1,6 @@
 ﻿namespace MyFirstApi.Entities;
 
-public class Laptop : Device
+public sealed class Laptop : Device
 {
     public override string GetBrand()
     {
@@ -14,5 +14,10 @@ public class Laptop : Device
             return "Model 1";
 
         return "Unknown";
+    }
+
+    public override string Hello()
+    {
+        return "Hello from Laptop";
     }
 }

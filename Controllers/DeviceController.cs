@@ -8,10 +8,8 @@ public class DeviceController : MyFirstApiBaseController
     [HttpGet]
     public IActionResult Get()
     {
-        var laptop = new Laptop();
+        var key = GetCustomKey();
 
-        var model = laptop.GetModel();
-
-        return Ok(model);
+        return Ok(key);
     }
 }
